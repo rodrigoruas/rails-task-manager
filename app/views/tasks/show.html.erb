@@ -3,10 +3,12 @@
 <div class="card">
   <div class="card-category"> <%= @task.status%> </div>
   <div class="card-description">
-    <h2><%= " #{@task.id} )  #{@task.name}"%> </h2>
+    <h2><%= " #{@task.name}"%> </h2>
     <p><%= @task.description%> </p>
-    <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Edit me!", edit_path(@task) %></button>
-    <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Delete me!", destroy_path(@task), method: :delete %></button>
-    <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Back", index_path(@task) %></button>
+    <div class="task-buttons">
+      <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Edit me!", edit_path(@task) %></button>
+      <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Delete me!", destroy_path(@task), method: :delete %></button>
+      <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Back", index_path(@task) %></button>
+    </div>
   </div>
 </div>

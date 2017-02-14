@@ -1,10 +1,18 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
-   <%= form_for(@task) do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-      <%= f.submit %>
-    <% end %>
 
+
+
+<%= form_for(@task) do |f| %>
+
+
+  <div class="card">
+    <div class="card-category"> <%= @task.status%> </div>
+    <div class="card-description">
+      <p>Name: <%= f.text_field :name %></p>
+      <p><%= f.text_area(:description, size: '50x5') %></p>
+      <div class="edit-button">
+        <button class="btn  btn-outline-success btn-sm">Add!</button>
+      </div>
+    </div>
+  </div
+
+<% end %>
