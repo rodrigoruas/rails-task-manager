@@ -1,0 +1,19 @@
+<h1>Tasks#edit</h1>
+<p>Find me in app/views/tasks/edit.html.erb</p>
+
+
+
+
+<%= form_for(@task) do |f| %>
+
+
+  <div class="card">
+    <div class="card-category"> <%= @task.status%> </div>
+    <div class="card-description">
+      <h2><%= f.text_field :name %></h2>
+      <p><%= f.text_field :description %></p>
+      <button type="button"  class="btn btn-outline-success btn-sm"><%= f.submit %></button>
+    </div>
+  </div
+
+<% end %>

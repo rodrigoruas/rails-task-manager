@@ -1,0 +1,26 @@
+
+
+<div class="container">
+  <h2>Here is your Task List!</h2>
+   <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Add new Task!", create_path(@tasks) %></button>
+  <% @tasks.each do |t| %>
+    <div class="row">
+      <div class="col-xm-12 col-md-12 col-lg-12">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <%= "#{t.name}   " %>
+              <div class="buttons">
+                <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Details", task_path(t) %></button>
+                <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Edit me!", edit_path(t) %></button>
+                <button type="button"  class="btn btn-outline-success btn-sm"><%= link_to "Delete me!", destroy_path(t), method: :delete %></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <%end%>
+</div>
+
+
+
+
